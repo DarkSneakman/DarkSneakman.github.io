@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RSI Shop - TP1 PCM</title>
+    <link rel="stylesheet" href="css/stylings.css" type="text/css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+    <header><h2>RSI Shop</h2>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="Home.html">Home</a>
+                </li>
+                <li>
+                    <a href="Portfolio.html">Catalog</a>
+                    <ul>
+                        <li>
+                            <a href="Portfolio.html#small">Small Ships</a>
+                        </li>
+                        <li>
+                            <a href="Portfolio.html#medium">Medium Ships</a>
+                        </li>
+                        <li>
+                            <a href="Portfolio.html#large">Large Ships</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="About.html">About</a>
+                </li>
+                <li>
+                    <a href="Contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+
+    </header>
+
+    <div id="spacer1"></div>
+    <div id="spacer3"></div>
+
+    <section class="slideshow">
+        <h3>Home</h3>
+        <p>Space is vast, and you need a way to get around.
+            In our website you'll find many ships ranging from small fighters to capital level transports</p>
+        <article class="slidesArt">
+            <img class="slideImg" src="imgs/background.png">
+            <img class="slideImg" src="imgs/background2.png">
+            <img class="slideImg" src="imgs/background3.png">
+        </article>
+
+        <script>
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("slideImg");
+
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex> slides.length) {slideIndex = 1}
+
+                slides[slideIndex-1].style.display = "block";
+
+                setTimeout(showSlides, 5000); // Change image every 4 seconds
+            }
+        </script>
+
+        <a href="Portfolio.html"><h4>To the Catalog!</h4></a>
+    </section>
+
+
+    <div id="spacer2">
+
+    </div>
+
+    <section class="pictures">
+        <figure>
+            <a href="Portfolio.html#small">
+                <img src="imgs/smallship.jpg">
+            </a>
+            <figcaption>Small ships</figcaption>
+        </figure>
+
+        <figure>
+            <a href="Portfolio.html#medium">
+                <img src="imgs/mediumship.jpg">
+            </a>
+            <figcaption>Medium ships</figcaption>
+        </figure>
+
+        <figure>
+            <a href="Portfolio.html#large">
+                <img src="imgs/largeship.jpg">
+            </a>
+            <figcaption>Large ships</figcaption>
+        </figure>
+    </section>
+
+    <footer>
+        <div id="spacer4">
+
+        </div>
+    </footer>
+
+
+</body>
+</html>
